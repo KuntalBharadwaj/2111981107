@@ -1,7 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const ProductOverview = (props) => {
+
+  // const [product,setProduct] = useState()
 
   let Product = [
     {
@@ -12,7 +15,8 @@ const ProductOverview = (props) => {
       "discount": 63,
       "companyName": "ABC",
       "catagory": "Phone",
-      "availability": "yes"
+      "availability": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s"
     },
     {
         "id": 2,
@@ -22,7 +26,8 @@ const ProductOverview = (props) => {
       "discount": 50,
       "companyName": "ABC",
       "catagory": "Phone",
-      "availability": "yes"
+      "availability": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s"
     },
     {
         "id": 3,
@@ -32,7 +37,8 @@ const ProductOverview = (props) => {
       "discount": 20,
       "companyName": "ABC",
       "catagory": "Phone",
-      "availability": "no"
+      "availability": "no",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s"
     },
     {
         "id": 4,
@@ -42,7 +48,8 @@ const ProductOverview = (props) => {
       "discount": 10,
       "companyName": "ABC",
       "catagory": "Phone",
-      "availability": "yes"
+      "availability": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s"
     },
     {
         "id": 5,
@@ -52,10 +59,10 @@ const ProductOverview = (props) => {
       "discount": 5,
       "companyName": "ABC",
       "catagory": "Phone",
-      "availability": "yes"
+      "availability": "yes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_HeSzHfBorKS4muw4IIeVvvRgnhyO8Gn8w&s"
     }
   ];
-
 
   Product = Product.filter(e=>{
     console.log(props.id)
@@ -64,7 +71,6 @@ const ProductOverview = (props) => {
 
   const product = Product[0]
 
-
   return (
     <div className="container mx-auto p-6 bg-gray-100 min-h-screen">
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
@@ -72,7 +78,7 @@ const ProductOverview = (props) => {
           <div className="md:flex-shrink-0">
             <img
               className="w-full h-64 object-cover md:w-64"
-              src=""
+              src={product.image}
               alt={product.productName}
             />
           </div>
